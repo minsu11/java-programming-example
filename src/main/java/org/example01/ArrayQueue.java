@@ -1,6 +1,7 @@
 package org.example01;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 public class ArrayQueue<E> implements Queue<E> {
@@ -118,7 +119,6 @@ public class ArrayQueue<E> implements Queue<E> {
         queue.remove();
         queue.add(2);
         queue.add(1);
-
                 
         
 
