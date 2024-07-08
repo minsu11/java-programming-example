@@ -1,0 +1,6 @@
+= Exam05
+
+- 원형 queue 구현
+- 가득 찬 경우 resize() 호출
+- 빈 경우 QueueEmptyException 표현
+- copy시 System.arraycopy() 사용 금지
