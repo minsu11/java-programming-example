@@ -1,0 +1,6 @@
+= Exam04
+
+- stack 배열로 구현
+- sort() 구현
+- compare to 사용
+- 제네릭
