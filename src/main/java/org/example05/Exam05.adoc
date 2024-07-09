@@ -1,6 +1,90 @@
 = Exam05
 
-- 원형 queue 구현
-- 가득 찬 경우 resize() 호출
-- 빈 경우 QueueEmptyException 표현
-- copy시 System.arraycopy() 사용 금지
+- array를 사용한 CirCular queue 구현
+- 가득 찬 경우 resize
+- 빈 경우 NoSuchElementException 표현
+- System.arraycopy() 사용 금지
+- array copy method 구현
+
+```java
+public interface Queue<E> {
+    void add(E data);
+
+    E element();
+
+    boolean isEmpty();
+
+    E remove();
+
+    int size();
+    
+} 
+```
+
+- Main문
+
+```java
+public class Exam05 {
+    public static void main(String[] args) {
+        Queue<Integer> intQue = new CircularQueue<>();
+        System.out.println("IntQueue Empty: "+ intQue.isEmpty());
+        intQue.add(10);  
+        System.out.println("IntQueue Empty: "+ intQue.isEmpty());
+        System.out.println("Remove data: "+intQue.pop());
+        System.out.println("IntQueue Empty: "+ intQue.isEmpty());
+        
+        intQue.add(10);
+        intQue.add(20);  
+        intQue.add(30);  
+        intQue.add(40);
+        intQue.add(50);  
+        intQue.add(60);  
+        intQue.add(70);  
+        intQue.add(80);
+        intQue.add(90);  
+        System.out.println("IntQueue count: "+ intQue.size());
+        intQue.add(100);
+        intQue.add(110);
+        System.out.println("IntQueue count: "+ intQue.size());
+        System.out.println("IntQueue remove");
+         
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println("IntQueue pop: "+intQue.pop());
+        System.out.println(intQue.isEmpty());
+
+    }
+}
+```
+
+- 출력문
+
+```
+IntQueue Empty: true
+IntQueue Empty: false
+Remove data: 10
+IntQueue Empty: true
+IntQueue count: 10
+IntQueue count: 20
+IntQueue remove
+IntQueue pop: 10
+IntQueue pop: 20
+IntQueue pop: 30
+IntQueue pop: 40
+IntQueue pop: 50
+IntQueue pop: 60
+IntQueue pop: 70
+IntQueue pop: 80
+IntQueue pop: 90
+IntQueue pop: 100
+IntQueue pop: 110
+IntQueue Empty: true
+```

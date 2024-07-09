@@ -1,10 +1,33 @@
 = Exam02
 
-- 피보나치 수열(재귀 함수)
-- 메모이제이션 기법 적용
+- 피보나치 수열(재귀 함수).
+- 메모이제이션 기법 적용.
+- main문 실행 시 동일하게 나와야함.
 
 
-== 메모이제이션
+```java
+public class Fibonacci {
+    
+    public static BigInteger fibonacci(BigInteger num) {
+        
+    }
+
+    public static long gcd(long a, long b){
+        
+    }
+
+    public static void main(String[] args) {
+        BigInteger a = new BigInteger("50");
+        BigInteger b = new BigInteger("100");
+
+        long num = gcd(fibonacci(a).longValue(),fibonacci(b).longValue());
+        System.out.println();
+    }
+
+}
+```
+
+
 
 
 ```

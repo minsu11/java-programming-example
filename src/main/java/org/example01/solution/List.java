@@ -1,4 +1,4 @@
-package org.example01;
+package org.example01.solution;
 
 import java.util.NoSuchElementException;
 
@@ -26,11 +26,13 @@ public interface List<E> {
 
     default E removeLast(){
         if(isEmpty()){
-            throw new NoSuchElementException()
+            throw new NoSuchElementException();
         }
         return remove(size());
     }
-
+    
+    void sort();
+    
     E get(int index);
     
     E set(int index, E element);

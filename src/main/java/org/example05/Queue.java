@@ -1,4 +1,4 @@
-package org.example01;
+package org.example05;
 
 public interface Queue<E> {
     void add(E data);
@@ -7,7 +7,7 @@ public interface Queue<E> {
 
     boolean isEmpty();
 
-    E remove();
+    E pop();
 
     int size();
     

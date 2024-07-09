@@ -1,29 +1,8 @@
-= Exam05
+package org.example05.solution;
 
-- array를 사용한 CirCular queue 구현
-- 가득 찬 경우 resize
-- 빈 경우 NoSuchElementException 표현
-- System.arraycopy() 사용 금지
-- array copy method 구현
+import org.example05.CircularQueue;
+import org.example05.Queue;
 
-```java
-public interface Queue<E> {
-    void add(E data);
-
-    E element();
-
-    boolean isEmpty();
-
-    E remove();
-
-    int size();
-    
-} 
-```
-
-- Main문
-
-```java
 public class Exam05 {
     public static void main(String[] args) {
         Queue<Integer> intQue = new CircularQueue<>();
@@ -59,32 +38,7 @@ public class Exam05 {
         System.out.println("IntQueue pop: "+intQue.pop());
         System.out.println("IntQueue pop: "+intQue.pop());
         System.out.println("IntQueue pop: "+intQue.pop());
-        System.out.println(intQue.isEmpty());
+        System.out.println("IntQueue Empty: "+intQue.isEmpty());
 
     }
 }
-```
-
-- 출력문
-
-```
-IntQueue Empty: true
-IntQueue Empty: false
-Remove data: 10
-IntQueue Empty: true
-IntQueue count: 10
-IntQueue count: 20
-IntQueue remove
-IntQueue pop: 10
-IntQueue pop: 20
-IntQueue pop: 30
-IntQueue pop: 40
-IntQueue pop: 50
-IntQueue pop: 60
-IntQueue pop: 70
-IntQueue pop: 80
-IntQueue pop: 90
-IntQueue pop: 100
-IntQueue pop: 110
-IntQueue Empty: true
-```

@@ -1,40 +1,5 @@
-= Exam01
+package org.example01.solution;
 
-- double list 구현
-- interface에 정의 된 메서드 구현
-- Exam01.java 실행문과 일치하도록 작성
-
-```java
-
-public interface List<E> {
-    boolean add(E data);
-
-    void addFirst(E data);
-
-    void add(E data, int index);
-
-    E remove(int index);
-
-    boolean isEmpty();
-    
-    int size();
-
-    E removeFirst();
-        
-    E removeLast();
-    
-    void sort();
-    
-    E get(int index);
-    
-    E set(int index, E element);
-}
-
-```
-
-- Main문
-
-```java
 public class Exam01{
     public static void main(String[] args) {
         List<Integer> intList = new DoubleLinkedList<>();
@@ -60,25 +25,11 @@ public class Exam01{
 
         System.out.println(intList.toString());
         intList.sort();
-        System.out.println(intList.toString());       
+        System.out.println(intList.toString());
+        
+
+
+        
+        
     }
 }
-```
-
-
-- 출력창
-
-``` 
-Int List Empty:true
-Int List Size:0
-------------------------------
-1
-Int List Empty:false
-Int List Size:1
-------------------------------
-Int List Empty:true
-Int List Size:0
-------------------------------
-20 1 100 220 24
-220 100 24 20 1
-```
