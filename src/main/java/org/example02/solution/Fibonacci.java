@@ -54,12 +54,20 @@ public class Fibonacci {
     public static void main(String[] args) {
         BigInteger a = new BigInteger("6");
         BigInteger b = new BigInteger("3");
+    
+
         System.out.println("fibonacci(100): "+fibonacci("100"));
         System.out.println("fibonacci(8): "+fibonacci(8));
+        System.out.println("fibonacci(8): "+fibonacci("1000"));
         System.out.println("fibonacci(0): "+fibonacci(0L));
         System.out.println("---------------------");
-        System.out.println( gcd(fibonacci(a), fibonacci(b)));
-        System.out.println(gcd(2,10));
+        // System.out.println( gcd(fibonacci(a), fibonacci(b)));
+        // System.out.println(gcd(2,10));
+        try{
+            fibonacci(-1);
+        }catch(NegativeNumberException e){
+            e.printStackTrace();;
+        }
     }
 
 }
