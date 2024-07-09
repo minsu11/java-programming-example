@@ -1,13 +1,3 @@
-= Exam02
-
-- 피보나치 수열(재귀 함수).
-- gcd() 구현
-- 메모이제이션 기법 적용.
-- main문 실행 시 동일하게 나와야함.
-- 필요한 Exception은 구현
-
-
-```java
 package org.example02;
 
 import java.math.BigInteger;
@@ -16,12 +6,16 @@ import org.example02.solution.*;
 
 public class Exam02 {
     public static Number gcd(Number a,Number b){
-        ```
+        if(Calc.checkZero(b)){
+            return Calc.abs(a);
+        }
+        return gcd(b, Calc.mod(a,b));
     }
     public static void main(String[] args) {
         BigInteger a = new BigInteger("6");
         BigInteger b = new BigInteger("3");
     
+
         System.out.println("fibonacci(100): "+Fibonacci.fibonacci("100"));
         System.out.println("fibonacci(8): "+Fibonacci.fibonacci(8));
         System.out.println("fibonacci(1000): "+Fibonacci.fibonacci("500"));
@@ -41,35 +35,3 @@ public class Exam02 {
         }
     }
 }
-
-```
-
-```java
-package org.example02.solution;
-
-import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.Map;
-
-public class Fibonacci {
-    public static (알맞은 타입) fibonacci(Number num) {
-      
-    }
-}
-```
-
-
-
-```
-출력창
-fibonacci(100): 354224848179261915075
-fibonacci(8): 21
-fibonacci(1000): 139423224561697880139724382870407283950070256587697307264108962948325571622863290691557658876222521294125
-fibonacci(0): 0
----------------------
-12 15 gcd value: 3
-fibonacci(a) fibonacci(b) gcd value: 2
--2 10 gcd value: 2
-음수 예외
-
-```

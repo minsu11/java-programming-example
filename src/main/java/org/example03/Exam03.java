@@ -1,6 +1,9 @@
-package org.example03.solution;
+package org.example03;
 
-public class Main {
+import org.example03.solution.DoubleListStack;
+import org.example03.solution.Stack;
+
+public class Exam03 {
     public static void main(String[] args) {
         Stack<Integer> intStack = new DoubleListStack<>();
         System.out.println("IntStack Count: "+intStack.count());

@@ -1,37 +1,75 @@
 = Exam02
 
 - 피보나치 수열(재귀 함수).
+- gcd() 구현
 - 메모이제이션 기법 적용.
 - main문 실행 시 동일하게 나와야함.
+- 필요한 Exception은 구현
 
 
 ```java
-public class Fibonacci {
-    
-    public static BigInteger fibonacci(BigInteger num) {
-        
-    }
+package org.example02;
 
-    public static long gcd(long a, long b){
-        
-    }
+import java.math.BigInteger;
 
+import org.example02.solution.*;
+
+public class Exam02 {
+    public static Number gcd(Number a,Number b){
+        ```
+    }
     public static void main(String[] args) {
-        BigInteger a = new BigInteger("50");
-        BigInteger b = new BigInteger("100");
+        BigInteger a = new BigInteger("6");
+        BigInteger b = new BigInteger("3");
+    
+        System.out.println("fibonacci(100): "+Fibonacci.fibonacci("100"));
+        System.out.println("fibonacci(8): "+Fibonacci.fibonacci(8));
+        System.out.println("fibonacci(1000): "+Fibonacci.fibonacci("500"));
+        System.out.println("fibonacci(0): "+Fibonacci.fibonacci(0L));
+        System.out.println("---------------------");
+        System.out.println("12 15 gcd value: "+gcd(12, 15));
 
-        long num = gcd(fibonacci(a).longValue(),fibonacci(b).longValue());
-        System.out.println();
+        System.out.println("fibonacci(a) fibonacci(b) gcd value: "+
+        gcd(Fibonacci.fibonacci(a), Fibonacci.fibonacci(b)));
+
+        System.out.println("-2 10 gcd value: "+gcd(-2,10));
+
+        try{
+            Fibonacci.fibonacci(-1);
+        }catch(NegativeNumberException e){
+            System.err.println(e.getMessage());
+        }
     }
+}
 
+```
+
+```java
+package org.example02.solution;
+
+import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Fibonacci {
+    public static (알맞은 타입) fibonacci(Number num) {
+      
+    }
 }
 ```
 
 
 
-
 ```
 출력창
- 
+fibonacci(100): 354224848179261915075
+fibonacci(8): 21
+fibonacci(1000): 139423224561697880139724382870407283950070256587697307264108962948325571622863290691557658876222521294125
+fibonacci(0): 0
+---------------------
+12 15 gcd value: 3
+fibonacci(a) fibonacci(b) gcd value: 2
+-2 10 gcd value: 2
+음수 예외
 
 ```
