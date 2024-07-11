@@ -1,8 +1,8 @@
-package org.example05;
+package org.example05.solution;
 
+import org.example05.solution.Queue;
 import java.util.NoSuchElementException;
-
-public class CircularQueue<E> implements Queue<E>{
+public class CircularQueue<E> implements Queue<E> {
     private static int CAPACITY_INIT;
     private int front;
     private int rear ;

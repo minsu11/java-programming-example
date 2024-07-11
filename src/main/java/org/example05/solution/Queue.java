@@ -1,4 +1,4 @@
-package org.example05;
+package org.example05.solution;
 
 public interface Queue<E> {
     void add(E data);

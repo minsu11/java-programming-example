@@ -1,4 +1,7 @@
-package org.example01.solution;
+package org.example01;
+
+import org.example01.solution.DoubleLinkedList;
+import org.example01.solution.List;
 
 public class Exam01{
     public static void main(String[] args) {

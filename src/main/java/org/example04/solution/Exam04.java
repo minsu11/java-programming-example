@@ -1,4 +1,4 @@
-package org.example04;
+package org.example04.solution;
 
 import java.util.NoSuchElementException;
 

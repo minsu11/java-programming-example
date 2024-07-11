@@ -30,13 +30,11 @@ public interface List<E> {
         }
         return remove(size());
     }
-    
-    void sort();
-    
+
     E get(int index);
     
     E set(int index, E element);
     
-    
+    void sort();
 
 }

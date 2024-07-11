@@ -1,10 +1,18 @@
-package org.example05.solution;
+package org.example05;
 
-import org.example05.CircularQueue;
-import org.example05.Queue;
+import org.example05.solution.CircularQueue;
+import org.example05.solution.Queue;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Exam05 {
+    public static List<?> test(List<?> list){
+        return list;
+    }
     public static void main(String[] args) {
+        List<Number> list = new ArrayList<>();
+
         Queue<Integer> intQue = new CircularQueue<>();
         System.out.println("IntQueue Empty: "+ intQue.isEmpty());
         intQue.add(10);  
