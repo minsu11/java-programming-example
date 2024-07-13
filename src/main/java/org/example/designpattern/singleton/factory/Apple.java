@@ -1,4 +1,4 @@
-package org.example.designpattern;
+package org.example.designpattern.singleton.factory;
 
 @CreationBean()
 public class Apple {
@@ -8,18 +8,5 @@ public class Apple {
     }
     public String getValue(){
         return value;
-    }
-
-
-
-
-
-
-    public void singleTon(String name){
-
-    } // 싱글톤 객체 만들기
-
-    public void protoType(){
-
     }
 }
